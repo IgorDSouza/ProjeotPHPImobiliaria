@@ -1,0 +1,91 @@
+body, html{
+    background-color: azure;
+    height: 100%;
+}
+.navbar>.container-fluid{
+    justify-content: center !important;
+    width: auto !important;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+.navbar{
+    background-color: rgba(67, 117, 151, 0.993) !important;
+}
+.containerContent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+.logo{
+    margin: 2% 0px;
+    background-color: bisque;
+    width: 100%;
+    background-image: url(img/bg.jpg);
+    background-size: cover;
+    display: flex;
+    height: 19vw;
+    justify-content: center;
+}
+.contentLogo{
+    backdrop-filter: blur(3px);
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    text-align: center;
+    border-radius: 15px;
+    width: 100%;
+    background-color: rgb(13 110 253 / 8%);
+    
+}
+.content h2{
+
+    padding: 18px;
+    background-color: rgb(13 110 253 / 25%);
+    margin: 20px;
+}
+.experienceCards{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #00000008;
+
+}
+.card{
+    margin:2%
+}
+.card-img-top{
+height: 80%;
+}
+p{
+    margin: 0px;
+}
+footer{
+    text-align: center;
+    background-color: #008eff;
+    width: 100%;
+    bottom: 0px;
+
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+.img{
+    display: flex;
+    flex-wrap: wrap;
+}
+.mg-top{
+    margin-top: 20px;
+}
+#cadImovel, #cadUsuario{
+ margin:10% 0px;
+}
