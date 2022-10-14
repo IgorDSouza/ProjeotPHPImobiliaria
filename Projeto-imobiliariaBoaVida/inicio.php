@@ -1,7 +1,7 @@
 <section class='containerContent' >
         <div class="logo">  
           <div class='contentLogo'>
-            <h1>Imoboliaria Boa Vida</h1>
+            <h1>Imobiliaria Boa Vida</h1>
             <p>Sua casa dos sonhos na vida real</p>
       </div>
         </div>
@@ -60,9 +60,10 @@ if(isset($_GET['tipo'])){
             echo ' <img class="img-thumbnail" style="width: 300px; height:190px" src="data:'.$imovel->getFotoTipo().';base64,'.base64_encode($imovel->getFoto()).' " > <br>';
             echo substr($imovel->getDescricao(),0,70);
             echo '<br><strong>Valor: </strong>'.$imovel->getValor().'<br>';
-            $tipo = $imovel->getTipo()=='A'?'Aluguel':'Venda';
+            $tipo = $imovel->getTipo();
+            if($tipo === 'Venda'){$metodo = 'Comprar';} else {$metodo='Alugar';};
             echo '<strong>Tipo: </strong>'.$tipo.'<br>';
-            echo '<a href="index.php?action=editar&id='.$imovel->getId().'&page=imovel" class="btn btn-primary btn-sm">Comprar</a>&nbsp;&nbsp;&nbsp;';
+            echo '<a href="index.php?action=editar&id='.$imovel->getId().'&page=imovel" class="btn btn-primary btn-sm">'.$metodo.'</a>&nbsp;&nbsp;&nbsp;';
             $cont++;
             if($cont==4)
               $cont=0;

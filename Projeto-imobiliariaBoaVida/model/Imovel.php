@@ -41,9 +41,9 @@ class Imovel extends Banco{
 
     public function getTipo(){
         if($this->tipo == 'A'){
-            $res = "Apartamento";
+            $res = "Aluguel";
         }else{
-            $res = "Casa";
+            $res = "Venda";
         }
         return $res;
     }

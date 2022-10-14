@@ -39,14 +39,31 @@ class UsuarioController{
         $usuario->setSenha($_POST['senha']);
 
         $logado = $usuario->logar();
+        $res = false;
 
-        $verify = $logado->getPermissao();
+        // usuario tenta logar
 
-        if($verify === "Administrador"){
-            $res = true;
-        }else{
-            $res = false;
+        if($logado == true  /* se encontrado no banco ele verifica a permissao */ ) {
+
+
+            $verify = $logado->getPermissao();
+
+            if($verify === "Administrador"){
+                $res = true;
+                // se for adm retorna true e vai aparecer as interações de adm(cadastro lista e etc)
+            }else{
+                // se for normal retorna false e vai aparecer as interações normais ( compra venda e etc)
+
+                $res = false;
+
+            }
+
         }
+
+
+        
+
+        
         return array(is_object($logado),$res);
     }
 
